@@ -8,11 +8,9 @@ void draw() {
   background(51);
 
   fill(255);  
-  float xoff = 0;       // Option #1: 2D Noise
-   //float xoff = yoff; // Option #2: 1D Noise
+  float xoff = yoff; // Option #2: 1D Noise
   for (float x = 0; x <= width; x += 10) {
-    float y = map(noise(xoff, yoff), 0, 1, 200,300); // Option #1: 2D Noise
-    //float y = map(noise(xoff), 0, 1, 200,300);    // Option #2: 1D Noise
+    float y = map(noise(xoff), 0, 1, 200,300);    // Option #2: 1D Noise
     stroke(255);
     strokeWeight(0.5);
     line(x,height , x, y);
