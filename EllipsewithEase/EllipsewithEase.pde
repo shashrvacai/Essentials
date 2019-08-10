@@ -19,6 +19,8 @@ surface.setResizable(true);
 void draw(){
   float a = amp.analyze()*10;
   
+  
+  e = map(e, 1,0,0.01,0.05);
   background(51);
   float R = map(a,0,1, 10,width/2);
   float Rr = R - r ;
